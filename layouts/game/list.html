@@ -1,0 +1,20 @@
+{{ define "game" }}
+<main>
+        <div class="container">
+    <article>
+      <header>
+        <h1> List Game AetherSX2</h1>
+      </header>
+      {{ .Content }}
+    </article>
+    <ul>
+      <!-- Ranges through content/posts/*.md -->
+      {{ range .Pages }}
+        <li>
+          <a href="{{ .RelPermalink }}"> {{ .LinkTitle }}</a>
+        </li>
+      {{ end }}
+    </ul>
+</div>
+</main>
+{{ end }}
