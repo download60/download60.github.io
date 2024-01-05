@@ -23,6 +23,31 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+	
+	a:link,
+a:visited,
+a:hover,
+a:active {
+	text-decoration: none;
+	color: #007d9c;
+	}
+	
+.textku  {
+
+padding: 1px !important;
+margin: 1px !important;
+
+}
+
+.titleku  {
+
+padding: 1px !important;
+margin: 1px !important;
+
+}
+
+</style>
 </head>
 
 <body id="top">
@@ -158,11 +183,22 @@
 <p>jxjdj</p>
 <section class="service">
 <div class="container">
-	 <div class="service-content">
-	<p class="hero-subtitle">Download Link</p>
+		
+	<div class="service-content">
+		<div class="hero-content titleku">
+<p class="service-text textku">Name : {{ .Title }}</p>
+<p class="service-text textku">Type : {{ .Params.type }}</p>
+<p class="service-text textku">By   : {{ .Params.by }}</p>
+	<p class="hero-subtitle titleku">Download Link</p>
 </div>
-<div class="hero-content">
-<p class="service-text">Name : {{ .Title }}</p>
+<div class="hero-content titleku">
+<!-- direct link adstera -->
+<p><a href="https://www.toprevenuegate.com/u2xr3383s?key=f3c86199ae716574923e2ee71d59bbd1">Link 1</a></p>
+<!-- direct link monetag -->
+<p><a href="https://hoglinsu.com/4/6851973">Link 2</a></p>
+<!-- hilltopads -->
+<p><a href="https://alive-working.com/bN3kVW0-P.3-pavJbsmRV/JmZVDi0e1VMPTZA_2aOXTbYiyOLcTrU/xyM/DXYK5SNPj/Mf">Link 3</a></p>
+<p><a href="{{ .Params.link }}">Link 4</a></p>
 </div>
 </div>
 </section>
