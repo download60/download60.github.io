@@ -1,8 +1,8 @@
-baseurl = "https://aethersx2.gitlab.io"
+baseurl = "https://download60.github.io"
 contentdir    = "content"
 layoutdir     = "layouts"
 publishdir    = "public"
-languageCode = "en-us"
+languageCode = "en"
 resourceDir = "../resources"
 DefaultContentLanguage = "en"
 Paginate     = false
@@ -21,5 +21,5 @@ buildFuture = true
   priority = 0.8
   filename = "sitemap.xml"
 [permalinks]
-  news     = ":section/:year/:month/:day/:slug"
+  news     = "/:year:month/:slug"
   
