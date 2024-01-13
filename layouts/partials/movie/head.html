@@ -1,0 +1,23 @@
+{{ partial "meta/html.html" . }}
+{{ partial "meta/opengraph.html" . }}
+{{ partial "meta/seo.html" . }}
+{{ partial "meta/twitter.html" . }}
+{{ partial "movie/framework.html" . }}
+<link rel="shortcut icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}" />
+
+{{ partial "google/searchconsole.html" . }}
+{{ partial "google/analytics.html" . }}
+{{ partial "google/tagmanager_head.html" . }}
+{{ partial "movie/style.html" . }}
+{{ if and .Params.ads "true" }}
+	{{ partial "google/adsense.html" . }}
+{{ end}}
+
+<title>{{ .Title }} Filmlane - Best movie collections</title>
+<link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml">
+<!-- google font link -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+{{ partial "ads/head.html" . }}
+

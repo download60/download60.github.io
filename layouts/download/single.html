@@ -1,10 +1,4 @@
-{{ partial "meta/main.html" . }}
-<head>
-{{ partial "movie/head.html" . }}
-</head>
-<body id="top">
-{{ partial "movie/navbar.html" . }}
-
+{{ define "download" }}
   <main>
     <article>
 
@@ -901,6 +895,4 @@ l.parentNode.insertBefore(s, l);
 
     </article>
   </main>
-  {{ partial "movie/footer.html" }}
-</body>
-</html>
+{{ end }}
