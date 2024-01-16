@@ -1,11 +1,14 @@
 {{ define "main" }}
 <main>
     <article>
-    <h1>Download Release</h1>
-    {{ range .Pages }}
-	<h3 class="mb-0"> <a class="post-link" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
-	{{ end }}
-    </article>
+    {{ $Name := site.RegularPages }}
+  {{ range (sort $Name) }}
+  <p><a class="game_link" href="{{ .RelPermalink }}">{{ .Param "name" }}</a></p>
+    {{ if .Type }}
+    <p><a class="game_link" href="{{ .RelPermalink }}">{{ .Param "name" }}</a></p>
+     {{ end }}   
+  {{ end }}
+  </article>
   </main>
   {{ end }}
   

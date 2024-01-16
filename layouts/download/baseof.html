@@ -1,14 +1,14 @@
 {{ partial "meta/main.html" . }}
 <head>
-{{ partial "movie/head.html" . }}
+{{ partial "head.html" . }}
 </head>
-<body id="top">
-{{ partial "movie/navbar.html" . }}
+<body>
+{{ partial "navbar.html"  . }}
 
 {{ block "download" . }}
 {{ .Content }}
 {{ end }}
-{{ partial "movie/footer.html" }}
+{{ partial "footer.html" }}
 </body>
 </html>
 
