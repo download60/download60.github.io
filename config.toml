@@ -1,4 +1,5 @@
 baseurl = "https://download60.github.io"
+title = "Download Files"
 contentdir    = "content"
 layoutdir     = "layouts"
 publishdir    = "public"
