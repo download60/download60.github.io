@@ -1,14 +1,21 @@
-{{ define "main" }}
-<main>
-    <article>
-    {{ $Name := site.RegularPages }}
-  {{ range (sort $Name) }}
-  <p><a class="game_link" href="{{ .RelPermalink }}">{{ .Param "name" }}</a></p>
-    {{ if .Type }}
-    <p><a class="game_link" href="{{ .RelPermalink }}">{{ .Param "name" }}</a></p>
-     {{ end }}   
-  {{ end }}
-  </article>
-  </main>
+{{ partial "meta/main.html" . }}
+<head>
+{{ partial "head.html" . }}
+</head>
+<body>
+{{ partial "navbar.html"  . }}
+
+<main class="container">
+    {{ range .Site.Pages }}
+    {{- if .Permalink -}}
+    	{{ if .Params.type }}
+    		<div><a href="{{ .Permalink }}">{{ .Title }}</a></div>
+    	{{ end }}
+    {{- end -}}
   {{ end }}
   
+  
+  
+  </main>
+  </body>
+  </html>
