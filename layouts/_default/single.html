@@ -20,6 +20,7 @@
 <script type='text/javascript' src='//pl22042766.toprevenuegate.com/c7/ce/ff/c7ceffb6b5aa7eda59605399ccd7a420.js'></script>
 
 
+
 <p class="service-text textku">Name : {{ .Title }}</p>
 <p class="service-text textku">Type : {{ .Params.type }}</p>
 <p class="service-text textku">By   : {{ .Params.by }}</p>
@@ -30,6 +31,15 @@
 <a href="{{ .Params.link }}">
 <img style="text-align: center; width: 150px; height: auto;" src="/img/download.png" alt="download">
 </a>
+
+## Decription
+<p>
+{{- if .Description -}}
+	{{ .Description }}
+{{- else -}}
+	{{ .Summary }}
+{{ end }}
+</p>
 
 
 {{ partial "footer.html" . }}
